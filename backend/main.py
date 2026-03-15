@@ -404,6 +404,11 @@ async def chat_endpoint(request: ChatRequest):
 
                     # Guardem el codi exitós per donar context als passos futurs
                     successful_code_history.append(python_code)
+
+                    # Mantenir només els últims 3 passos per evitar overflow de context
+                    if len(successful_code_history) > 3:
+                        successful_code_history.pop(0)
+
                     last_failure_output = stdout.strip()
                     consecutive_failures = 0
 
@@ -459,13 +464,17 @@ async def chat_endpoint(request: ChatRequest):
                     # 🔍 SANDBOX STATE per context d'error
                     sandbox_state_error = f"\n{sandbox.get_state_summary()}\n"
 
+                    # Mostrem només els últims 3 passos per no sobrecarregar el context
+                    recent_history = successful_code_history[-3:] if successful_code_history else []
+                    total_steps = len(successful_code_history)
+
                     feedback = (
                         f"ERROR AL PAS {step + 1}:\n{error}\n\n"
                         f"{sandbox_state_error}\n"
-                        f"Codi dels passos anteriors exitosos:\n"
-                        + ("\n---\n".join([f"Pas {i+1}:\n```python\n{c}\n```"
-                                          for i, c in enumerate(successful_code_history)])
-                           if successful_code_history else "(cap pas exitós encara)")
+                        f"Context dels últims passos exitosos ({len(recent_history)} de {total_steps} totals):\n"
+                        + ("\n---\n".join([f"Pas recent:\n```python\n{c}\n```"
+                                        for c in recent_history])
+                        if recent_history else "(cap pas exitós encara)")
                         + f"\n\nCorregeix l'error. Usa NOMES les variables que existeixen al sandbox."
                         + strategy_warning
                     )
