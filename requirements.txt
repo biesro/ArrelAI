@@ -1,0 +1,32 @@
+# ==========================================
+#   ARREL AI — Backend Dependencies
+# ==========================================
+
+# Web Framework
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+
+# Ollama Client
+ollama==0.4.4
+
+# Vector Database & RAG
+chromadb==0.5.23
+flashrank==0.2.8
+
+# Document Processing
+pypdf==5.1.0
+python-docx==1.1.2
+
+# Environment & Config
+python-dotenv==1.0.1
+
+# File Watching
+watchdog==6.0.0
+
+# Scientific Computing
+numpy==2.0.2
+pandas==2.2.3
+matplotlib==3.9.2
+
+# CORS & HTTP
+python-multipart==0.0.9

@@ -1,0 +1,16 @@
+# ==========================================
+#   ARREL AI — Testing Dependencies
+# ==========================================
+# Instal·la amb: pip install -r requirements_test.txt
+
+# Framework de testing
+pytest>=7.4.0
+
+# Cobertura de codi
+pytest-cov>=4.1.0
+
+# Timeout per tests (evitar tests penjats)
+pytest-timeout>=2.1.0
+
+# Nota: Les dependencies del backend (requirements.txt) 
+# també són necessàries per executar els tests
