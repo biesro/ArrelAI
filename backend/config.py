@@ -36,9 +36,6 @@ MIN_RESEARCH_STEPS = int(os.getenv("MIN_RESEARCH_STEPS", "3"))
 ENABLE_SELF_REFLECTION = os.getenv("ENABLE_SELF_REFLECTION", "true").lower() == "true"
 REFLECTION_FREQUENCY = int(os.getenv("REFLECTION_FREQUENCY", "1"))  # Cada quants passos reflexionar (1 = sempre)
 
-RAG_N_RETRIEVAL = 15  # Quants fragments demanem a Chroma inicialment
-RAG_N_FINAL = 5      # Quants fragments li arriben al model després del Reranker
-
 RESEARCH_CONTINUE_PROMPT = """Has executat codi i aquí tens els resultats:
 
 STATUS: {status}
