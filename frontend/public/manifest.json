@@ -1,0 +1,28 @@
+{
+  "short_name": "Arrel AI",
+  "name": "Arrel AI - Estació de Treball IA Local",
+  "description": "Investigació científica amb RAG automàtic, sandbox persistent i loops iteratius. 100% local.",
+  "icons": [
+    {
+      "src": "favicon_arrel_ai.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "arrel_ai_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "arrel_ai_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0f172a",
+  "background_color": "#0f172a",
+  "categories": ["productivity", "developer tools", "science"],
+  "lang": "ca"
+}

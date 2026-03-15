@@ -1,0 +1,31 @@
+/* Reset global per a Arrel AI */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #0f172a; /* El blau fosc de la teva Fase 3 */
+  overflow: hidden; /* Evitem el scroll doble */
+}
+
+/* Scrollbar personalitzada per a un look més modern */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
