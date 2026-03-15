@@ -3,30 +3,30 @@
 # ==========================================
 
 # Web Framework
-fastapi==0.115.0
-uvicorn[standard]==0.32.0
+fastapi>=0.115.0,<0.116.0
+uvicorn[standard]>=0.32.0,<0.33.0
 
 # Ollama Client
-ollama==0.4.4
+ollama>=0.4.0,<0.5.0
 
 # Vector Database & RAG
-chromadb==0.5.23
-flashrank==0.2.8
+chromadb>=0.5.20,<0.6.0
+flashrank>=0.2.8,<0.3.0
 
 # Document Processing
-pypdf==5.1.0
-python-docx==1.1.2
+pypdf>=5.0.0,<6.0.0
+python-docx>=1.1.0,<2.0.0
 
 # Environment & Config
-python-dotenv==1.0.1
+python-dotenv>=1.0.0,<2.0.0
 
 # File Watching
-watchdog==6.0.0
+watchdog>=6.0.0,<7.0.0
 
-# Scientific Computing
-numpy==2.0.2
-pandas==2.2.3
-matplotlib==3.9.2
+# Scientific Computing (IMPORTANT: NumPy 1.x per compatibilitat)
+numpy>=1.26.0,<2.0.0
+pandas>=2.2.0,<3.0.0
+matplotlib>=3.9.0,<4.0.0
 
 # CORS & HTTP
-python-multipart==0.0.9
+python-multipart>=0.0.12,<0.1.0
