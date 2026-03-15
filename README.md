@@ -46,8 +46,8 @@
 ### 1️⃣ Clona el repositori
 
 ```bash
-git clone https://github.com/el-teu-usuari/arrel-ai.git
-cd arrel-ai
+git clone https://github.com/biesro/ArrelAI.git
+cd ArrelAI
 ```
 
 ### 2️⃣ Configura el Backend
